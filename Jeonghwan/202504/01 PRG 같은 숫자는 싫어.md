@@ -22,7 +22,7 @@
 
 ---
 
-![alt text](image.png)
+![alt text](./resource/image.png)
 
 ### ⏰ 시간 복잡도
 
