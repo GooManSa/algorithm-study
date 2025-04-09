@@ -13,10 +13,11 @@
 
 ✅ 테스트 인증
 
-![image](../../image/스택1.png)
+![Image](https://github.com/user-attachments/assets/1be09a7e-8852-438d-a0dd-7e7e31eb7350)
 
 ⏰ 시간 복잡도
 O(N)
+
 🧑‍💻 코드
 
 ```js
