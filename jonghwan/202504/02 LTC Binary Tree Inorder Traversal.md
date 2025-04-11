@@ -7,15 +7,21 @@
  */
 const inorderTraversal = function (root) {
   const result = [];
+  const stack = [];
+  let current = root;
 
-  function traverse(node) {
-    if (!node) return;
+  while (current !== null || stack.length > 0) {
+    while (current !== null) {
+      stack.push(current);
+      current = current.left;
+    }
 
-    traverse(node.left);
-    result.push(node.val);
-    traverse(node.right);
+    current = stack.pop();
+    result.push(current.val);
+
+    current = current.right;
   }
-  traverse(root);
+
   return result;
 };
 ```
