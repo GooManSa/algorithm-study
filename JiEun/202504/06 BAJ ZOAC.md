@@ -11,10 +11,10 @@ public class baekjoon_16719 {
     public static void find(int answerIdx) {
         int idx = 0; // 인덱스 초기화
 
-        // 사전순으로 가장 빠른 문자 찾기
+        // StringBuilder의 왼쪽부터 비교하며 최선의 선택을 함
         for (int i = 1; i < sb.length(); i++) {
-            if (sb.charAt(i) < sb.charAt(idx)) break;
-            idx = i; // 사전 순으로 빠른 있다면 idx 갱신
+            if (sb.charAt(i) < sb.charAt(idx)) break; //현재 문자가 다음에 오는 문자보다 빠르다면 for문 종료
+            idx = i;
         }
 
         sb.deleteCharAt(idx); // 찾은 인덱스 문자 삭제
@@ -30,7 +30,7 @@ public class baekjoon_16719 {
         answer = new String[length]; // 문자열 길이만큼 answer 배열 초기화
         answer[length-1] = str;
         for(int i=length-2; i>=0; i--) find(i);
-        for(String s : answer) System.out.println(s); //결과 출력
+        for(String s : answer) System.out.println(s); //결과 출력 
     }
 }
 ```
