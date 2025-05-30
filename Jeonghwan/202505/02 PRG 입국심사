@@ -1,0 +1,35 @@
+```java
+import java.util.*;
+
+class Solution {
+    public long solution(int n, int[] times) {
+        long answer = 0;
+
+        Arrays.sort(times);
+
+        long min = 1;
+        long max = (long)times[times.length-1] * n;
+
+        long l = min;
+        long r = max;
+
+        while (l <= r) {
+            long mid = (l + r) / 2;
+
+            long amount = 0;
+            for (int x : times) {
+                amount += (mid / x);
+            }
+            if (amount >= n) {
+                answer = mid;
+                r = mid - 1;
+            } else {
+                l = mid + 1;
+            }
+        }
+
+
+        return answer;
+    }
+}
+```
