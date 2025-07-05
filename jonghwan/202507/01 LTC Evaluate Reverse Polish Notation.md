@@ -1,11 +1,11 @@
-````js
+```js
 function evalRPN(tokens) {
   let stack = [];
   let ops = {
     '+': (a, b) => a + b,
     '-': (a, b) => a - b,
     '*': (a, b) => a * b,
-    '/': (a, b) => a / b >= 0 ? Math.floor(a / b) : Math.ceil(a / b),
+    '/': (a, b) => (a / b >= 0 ? Math.floor(a / b) : Math.ceil(a / b)),
   };
   for (let t of tokens) {
     if (ops[t]) {
@@ -17,5 +17,5 @@ function evalRPN(tokens) {
     }
   }
   return stack.pop();
-};```
-````
+}
+```
