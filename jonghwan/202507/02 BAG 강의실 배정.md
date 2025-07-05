@@ -1,4 +1,5 @@
 ```js
+//11000번 강의실 배정
 const fs = require('fs');
 
 const input = require('fs')
